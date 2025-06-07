@@ -1,0 +1,230 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #000;
+  /* background: url("marvel-bg.jpg") no-repeat center center/cover; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  width: 200px;
+  max-width: 80vw;
+  height: auto;
+}
+
+.container {
+  background-color: rgba(245, 245, 220, 0.6); /* Transparent black */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  color: #fff;
+  margin: auto;
+  transform: translateY(-40px); /* Move container slightly up */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ff0000;
+  letter-spacing: 1px;
+}
+
+.input-div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#input-box {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#searchBtn:hover {
+  background-color: #cc0000;
+}
+
+#result img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#result p {
+  text-align: left;
+  line-height: 1.6;
+}
+.hero-image {
+  width: 300px;
+  border-radius: 10px;
+  display: block; /* Center karne ke liye agar chahe */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.hero-name {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #e62429; /* Marvel red color */
+}
+
+.hero-desc {
+  font-family: "Arial", sans-serif;
+  padding: 10px 20px;
+  color: #333;
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+    max-width: 98vw;
+    transform: none;
+  }
+  #logo {
+    width: 140px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 220px;
+  }
+  .hero-desc {
+    padding: 8px 6px;
+    font-size: 15px;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .input-div {
+    flex-direction: column;
+    gap: 8px;
+  }
+  #searchBtn,
+  #input-box {
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 8px;
+  }
+  .hero-desc {
+    font-size: 13px;
+    padding: 6px 2px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
+
+/* Show outline/border on input focus */
+#input-box:focus {
+  outline: 2px solid #ff0000;
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+}
+#result {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 24px 18px;
+  margin-top: 24px;
+  box-shadow: 0 2px 16px rgba(230, 36, 41, 0.15);
+  color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+#result:hover {
+  box-shadow: 0 4px 32px rgba(230, 36, 41, 0.25);
+}
+
+#result .hero-name {
+  font-size: 2rem;
+  color: #ff0000;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#result .hero-desc {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: #f5f5f5;
+  font-size: 1.08rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+#result .hero-image {
+  border: 2px solid #e62429;
+  box-shadow: 0 2px 12px rgba(230, 36, 41, 0.12);
+  margin-bottom: 18px;
+}
+
+#result ul,
+#result ol {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 12px 0;
+  color: #fff;
+}
+
+#result li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+#result a {
+  color: #ff0000;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+#result a:hover {
+  color: #fff;
+  background: #ff0000;
+  border-radius: 3px;
+  padding: 1px 4px;
+}
